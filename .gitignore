@@ -1,5 +1,8 @@
 
 ###> symfony/framework-bundle ###
+config/packages
+bin/console
+.env
 /.env.local
 /.env.local.php
 /.env.*.local
