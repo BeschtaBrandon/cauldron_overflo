@@ -1,0 +1,8 @@
+.show-content {
+    margin-left: 1.75rem;
+}
+
+h2:first-of-type {
+    margin-top: 1rem;
+    color: darkgray;
+}

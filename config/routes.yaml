@@ -1,0 +1,6 @@
+index:
+   path: /
+   controller: App\Controller\QuestionController::homepage
+contacts:
+   path: /contacts
+   controller: App\Controller\ContactsController::contacts
