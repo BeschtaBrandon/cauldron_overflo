@@ -3,21 +3,26 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Service\MarkdownHelper;
+
 
 class QuestionController extends AbstractController {
     /**
      * @Route("/", name="app_homepage")
      */
-    public function homepage() {
+    public function homepage(MarkdownHelper $helper) {
+
+        $parsedQuestionText = $helper->parse("I've been turned into a cat, any thoughts on how to turn back? While I'm **adorable**, I don't really care for cat food.");
 
         $question0 = new \stdClass();
         $question0->id = 0;
         $question0->slug = 'reverse-a-spell';
         $question0->title = 'Reversing a Spell';
-        $question0->description = "I've been turned into a cat, any thoughts on how to turn back? While I'm adorable, I don't really care for cat food.";
+        $question0->description = $parsedQuestionText;
         $question0->imgSrc = "https://www.maize.io/wp-content/uploads/2020/07/5adb13a7-6d23-48ac-832a-64fc6f13f43a-e1600960276372.jpg";
+
+        
 
         $question1 = new \stdClass();
         $question1->id = 1;

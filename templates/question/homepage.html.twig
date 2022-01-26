@@ -31,7 +31,7 @@
                             <a class="q-title" href="{{ path('app_question_show', { slug: question.slug }) }}"><h2>{{ question.title }}</h2></a>
                             <div class="q-display p-3">
                                 <i class="fa fa-quote-left mr-3"></i>
-                                <p class="d-inline">{{ question.description }}</p>
+                                <p class="d-inline">{{ question.description|raw }}</p>
                                 <p class="pt-4"><strong>--Jerry</strong></p>
                             </div>
                         </div>
